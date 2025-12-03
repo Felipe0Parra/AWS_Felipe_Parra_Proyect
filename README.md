@@ -16,8 +16,7 @@ Es importante tener en cuenta que es necesario habilitar la instancia como una v
 Una vez creada la instancia de EC2 debemos instalar el Nginx, y el agente de CloudWatch que es el que nos va a permitir realizar un monitoreo y nos va a servir de puente en el envió de logs.
 
 
-
-<img width="828" height="636" alt="Captura desde 2025-12-02 21-03-30" src="https://github.com/user-attachments/assets/5f3490f3-d93a-4616-9238-386497303793" />
+<img width="836" height="398" alt="Captura desde 2025-12-02 21-03-42" src="https://github.com/user-attachments/assets/df3141a4-2501-48e7-955c-3ce017a84f1f" />
 
 
 
@@ -26,10 +25,8 @@ Esto nos permitirá poder ver las metricas que elijamos conocer de la instancia 
 
 
 
-<img width="836" height="398" alt="Captura desde 2025-12-02 21-03-42" src="https://github.com/user-attachments/assets/45a038f9-9d66-4da2-8b61-3c1e42a812e8" />
-<img width="836" height="398" alt="Captura desde 2025-12-02 21-03-51" src="https://github.com/user-attachments/assets/eb2ef5f6-134d-419a-8a61-a483ed696ee4" />
 
-
+<img width="828" height="636" alt="Captura desde 2025-12-02 21-03-30" src="https://github.com/user-attachments/assets/cfb9e29a-33c1-4544-a596-1a832b0db9c6" />
 
 
 
@@ -37,15 +34,15 @@ Esto nos permitirá poder ver las metricas que elijamos conocer de la instancia 
 Veremos tambien desde la informacion de los registros que portan una traza que permite seguirlos con X-ray:
 
 
+<img width="836" height="398" alt="Captura desde 2025-12-02 21-03-51" src="https://github.com/user-attachments/assets/6490b0f5-6d11-49f0-96f1-8801181964ae" />
 
-<img width="836" height="398" alt="Captura desde 2025-12-02 21-03-58" src="https://github.com/user-attachments/assets/f89899c5-00a9-4abe-b900-ebf6844953aa" />
 
 
 
 Esto permite tener una guía visual en la seccion de X-ray de CloudWatch para visualizar que tipo de procesos estan experimentando esos datos:
 
 
-<img width="836" height="398" alt="Captura desde 2025-12-02 21-04-05" src="https://github.com/user-attachments/assets/f8aa9ec5-ddab-44d0-af62-a35324fddfc4" />
+<img width="836" height="398" alt="Captura desde 2025-12-02 21-03-58" src="https://github.com/user-attachments/assets/c396644e-a89e-4ecf-925b-8e6d24a7dc93" />
 
 
 
@@ -53,8 +50,8 @@ Ahora bien, con este mismo funcionamiento y con los datos disponibles, es posibl
 
 
 
+<img width="836" height="398" alt="Captura desde 2025-12-02 21-04-05" src="https://github.com/user-attachments/assets/cddcefca-4aac-4cd0-a884-ed914157c566" />
 
-<img width="836" height="398" alt="Captura desde 2025-12-02 21-04-13" src="https://github.com/user-attachments/assets/13e1d5ee-647a-4ebf-9146-64c1ebe99be3" />
 
 
 
@@ -64,7 +61,8 @@ Luego se deben crear las funciones lambda, las cuales en este caso son 2, una se
 En CloudWatch, tambien tendremos grupos de registros disponibles para observar una vez se haya creado la función lambda correspondiente y se haya asociado el permiso para recibir sus logs.
 
 
-<img width="836" height="398" alt="Captura desde 2025-12-02 21-04-24" src="https://github.com/user-attachments/assets/e4addd80-69e9-4879-93ca-d4a479fee5c5" />
+<img width="836" height="398" alt="Captura desde 2025-12-02 21-04-24" src="https://github.com/user-attachments/assets/fef585a7-f91c-49b5-9cb7-f89c738f156b" />
+
 
 
 
@@ -72,7 +70,8 @@ El paso siguiente es construir las secuencias de Firehose, que son simplemente c
 
 
 
-<img width="836" height="398" alt="Captura desde 2025-12-02 21-04-29" src="https://github.com/user-attachments/assets/13a926f1-5c7a-4163-ba07-93b67d111b76" />
+<img width="836" height="398" alt="Captura desde 2025-12-02 21-04-24" src="https://github.com/user-attachments/assets/02dc5362-81a3-478e-aa92-85dc703a8ed4" />
+
 
 
 
@@ -80,7 +79,12 @@ El paso siguiente es construir las secuencias de Firehose, que son simplemente c
 Una vez se logre esto se debe "matricular" el indice de los datos en OpenSearch, y se empezaran a recibir:
 
 
-<img width="836" height="398" alt="Captura desde 2025-12-02 21-04-35" src="https://github.com/user-attachments/assets/7e0c585e-0630-4a12-8837-5a9c19e4389e" />
+<img width="836" height="398" alt="Captura desde 2025-12-02 21-04-29" src="https://github.com/user-attachments/assets/31e65686-5cda-4644-8c18-02a4c12d4870" />
+
+
+
+<img width="836" height="398" alt="Captura desde 2025-12-02 21-04-35" src="https://github.com/user-attachments/assets/4c2f0eef-f4b8-4eef-b374-cb5c0fd1f00e" />
+
 
 
 
