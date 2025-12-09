@@ -1,4 +1,4 @@
-# AWS_Felipe_Parra_Proyect
+# AWS_Proyecto_Observabilidad
 Repositorio sobre el proyecto de observabilidad en la nube de Amazon Web Services.
 El proyecto se inicia configurando la instancia de EC2 que se desea utilizar, instancia la cual corresponde a nuestro servidor y es donde se alojara el nginx que utilizaremos como pagina web en la cual los clientes se loggeran. Sin embargo, antes de empezar a activar servicios es importante configurar y establecer la seguridad, para esto primero se crea una persona, para no exponer al root user y luego se asignan roles, que permitan activar servicios y permitir la comunicación entre ellos.
 
