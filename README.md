@@ -94,3 +94,18 @@ El proceso siguiente una vez habiendo logrado lo mas dificil que es permitir la 
 <img width="1855" height="968" alt="Captura desde 2025-12-01 19-14-29" src="https://github.com/user-attachments/assets/e693b7be-a64d-4de8-963c-20914b7a79a8" />
 
 
+El servicio de Grafana tambien puede usar el pluggin de ElasticSearch, realizan esecialmente el mismo proceso, de recibir los permisos de Firhose, los indices para cada uno de los streams de Firehose y la interfaz de DashBoards para configurar la visualización.
+
+<img width="959" height="968" alt="Captura desde 2025-12-11 21-55-19" src="https://github.com/user-attachments/assets/a94c3c5b-6761-406a-bf9d-ca6b106fad15" />
+
+
+Por lo cual es posible hacer la misma visualización y observabilidad de los datos que están entrando el servidor como logs de Nginx desde EC2 y la ejecución de funciones Lambda que son nuestras aplicaciones que producen los datos. Se pueden visualizar graficas de numeros de errores detectados por ejecución de una función lambda, los registros y su información, la distribución temporal de estos accesos en terminos del uso de disco o uso de ram en la instancia de EC2, o la información de cada pedido a la funcion lambda.
+
+
+<img width="959" height="968" alt="Captura desde 2025-12-11 21-49-00" src="https://github.com/user-attachments/assets/e555e46f-d54a-49d8-a990-714069e3953e" />
+
+
+
+Se tienen habilitadas tambien funciones como CloudWatch logs insights que nos permite una visualización del comportamiento de los datos muy similar a OpenSearch DashBoards o Kibana. 
+
+Agregamos una función con Machine Learning en Amazon SageMaker, desde un notebook de Jupyter que nos permite analizar comportamientos anómalos en un conjunto de datos como el que puede estarse reportando por cualquiera de los servicios o como un archivo .csv que subimos directamente al Bucket de S3 en este caso. Los resultados del analisis se reportan directamente a este bucket en forma de imagen .png de la grafica del analisis que genera el código usando sckit-learn.
