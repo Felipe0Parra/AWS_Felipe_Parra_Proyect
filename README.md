@@ -109,3 +109,6 @@ Por lo cual es posible hacer la misma visualización y observabilidad de los dat
 Se tienen habilitadas tambien funciones como CloudWatch logs insights que nos permite una visualización del comportamiento de los datos muy similar a OpenSearch DashBoards o Kibana. 
 
 Agregamos una función con Machine Learning en Amazon SageMaker, desde un notebook de Jupyter que nos permite analizar comportamientos anómalos en un conjunto de datos como el que puede estarse reportando por cualquiera de los servicios o como un archivo .csv que subimos directamente al Bucket de S3 en este caso. Los resultados del analisis se reportan directamente a este bucket en forma de imagen .png de la grafica del analisis que genera el código usando sckit-learn.
+
+
+<img width="959" height="968" alt="Captura desde 2025-12-11 22-13-44" src="https://github.com/user-attachments/assets/fccf454d-5197-41f0-814d-6de6c2439470" />
